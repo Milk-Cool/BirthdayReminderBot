@@ -1,0 +1,26 @@
+{
+  "name": "birthdayreminderbot",
+  "version": "0.1.0",
+  "description": "Birthday reminder Telegram bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Milk-Cool/BirthdayReminderBot.git"
+  },
+  "keywords": [
+    "birthday",
+    "telegram"
+  ],
+  "author": "Milk_Cool",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Milk-Cool/BirthdayReminderBot/issues"
+  },
+  "homepage": "https://github.com/Milk-Cool/BirthdayReminderBot#readme",
+  "dependencies": {
+    "any-date-parser": "^1.5.4"
+  }
+}

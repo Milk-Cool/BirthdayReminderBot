@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bday-reminder-397109",
+  "private_key_id": "eb334fc026bcf3daf361035d7bf936b04a8688da",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCO0gZgknKkoY5Z\n5CRDLAG/R4kjTSc7+qc3my5hAjfMiVP0u6Yt9rI3fb6kItlV8Z7Qd+TsXZ/06wc3\nR22k5JtM3eYOKFtQGqivlQtxCEIWYpQ0cbgk5WPBG0gQwKhn99ed9Xp85EoDC03M\naC9Z+3lW/qmTzOaYO9DOPWUl4jfhKzdtXAalSjx+6/Eb3hKtnD1v2UVBd9yrBXEh\n1NzZw89rO05E6NOU9RuFnzainwhhIEpBDwvhS/4x848dY8JyTuRGLwF/uG140LMU\nF1CxOyo4WKR/SnB6fbAky53io9g0N0l63Ef9IgEOkbb3L3/k6B1ugTntIStG8ucB\nGHE/3jfrAgMBAAECggEAAfWJltuLbQy2Si9h+/XnlDsj+3L8fcsjbhTX3wbLwyeD\nGlFUpz7CFRbJfbDosFAfMJbkcgWawx5SPATj0SY9pyFIHZuaHRAwjjAKNyO43Fu/\n0rRYpVDsPGLmayxpYvu4XndWlc3/4ejOyWYIeECF2palttxRsXbol1uqPonK4HDV\nE56ecq9Lr5AR6ZvgLwP2J04PpA6R0HNd5J+vePwgz/tqzkWWMYO+SepifzplW8Xt\nUuDaL3r6ej5JWNLmfHOQQ8vspDrSncv5UBeacG0Lftj2zN7cboqLAI/kmCjVvuSt\npDAlkxYg+4aij4JyedbOykvxsXNfv3SthfGr1VHBMQKBgQDCwzC3MswPYkElY558\nMxpiqXfp/XgTj6EgUKkp/QxGF7xVpJOQDDGatRpCkvXu7vNW7unBqA7c36UTeFX7\nA+iyfxZAlP408D5hba23FZNnk5KluofgY4Vl6myV/1zd1uz77RY56xLjPHyuwkvO\nMco02JZe8XgkDcAWvhzBbUmZSQKBgQC7uervZXeFbZvaVX8mB2wqJbbM2gIZsEUt\ny0+NFTaY9OPWQkAPHADIYvq6FIgvUw4rMH5m48OMnPsqK/XFVncTfZMTdCJ8sx4a\n9QfGl4fjtN+5VYPUUVpgsbdDGmYLPiFuDfny86yR0Q1RojxCRtOxBwsJSWF/J/3a\nnufRJGybkwKBgEpEomwJm9T187+tOD9GQXaEBy0cMdDLwXaQK6HOVALahD/oTTjt\n3XCQRN5EKjIdvn9VBaCKVHiXc9xz092vhOmkGrkv16waPL9sUoTxXk9t78rw0WWY\nrcLKXPPp9+DEV4RNyV72rDIo26bMgpmzVNdIDDdSPy0IbUp+3npIEXu5AoGAfI9P\nCIud86WX3RYPqM8SASFHGsOo0xy3ujwFy8oAkRsktfz9fkkJZ+ztCl0nQ6drZlLl\n/CUyknFy4jeK+uZ1WjRfS3Aqle1Pk3l0MFxJKVjRfar1LwLP4grpW5f/j4QpMFoL\nuB3hKlu456qrKxrNyc+vjfjnvTRu5wm7LXVqrwsCgYEArtra2QjpqKxaQ7RWo5m3\n+JgBNoOEsg/tAOkiEt1iTSK5qV4kO92ec/mMRtARwKpV2QxKwba/cotRyGN5xlQF\nskWc40uhvDy2yPWVOWqXSdnEnkCAjYgo85YZ5EsOXy4k5KLu1l6Tky7CYKtcqp3F\nu1fkxD6pmuaErFerZ5/c0N8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "birthday-reminder@bday-reminder-397109.iam.gserviceaccount.com",
+  "client_id": "114098285696089814821",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/birthday-reminder%40bday-reminder-397109.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

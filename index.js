@@ -42,5 +42,5 @@ let bdays = [];
 
 http.createServer((req, res) => {
     res.writeHead(200);
-    res.end("OK");
+    res.end(JSON.stringify(bdays));
 }).listen(8080);

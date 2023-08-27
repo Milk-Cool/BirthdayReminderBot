@@ -24,10 +24,10 @@ let bdays = [];
     await sheet.loadCells("A1:B999");
     for(let i = 0; i < 999; i++) {
         let date = sheet.getCell(i, 0)?.formattedValue?.replace(/\s+/g, "");
-        if(!date) break;
+        if(!date) continue;
         date = Date.fromString(date);
         const name = sheet.getCell(i, 1)?.formattedValue;
-        if(!name) break;
+        if(!name) continue;
         bdays.push([date.getDate(), date.getMonth(), name]);
     }
     console.log(bdays);

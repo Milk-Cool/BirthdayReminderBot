@@ -3,6 +3,7 @@ const { JWT } = require("google-auth-library");
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const TelegramBot = require("node-telegram-bot-api");
 const http = require("http");
+const cron = require("node-cron");
 
 let { TOKEN, SPREADSHEET, CHAT, EMAIL, KEY } = process.env;
 KEY = KEY.replaceAll("\\n", "\n");
@@ -20,24 +21,25 @@ let bdays = [];
     });
     const doc = new GoogleSpreadsheet(SPREADSHEET, client);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[0];
-    await sheet.loadCells("A1:B999");
-    for(let i = 0; i < 999; i++) {
-        let date = sheet.getCell(i, 0)?.formattedValue?.replace(/\s+/g, "");
-        if(!date) continue;
-        date = Date.fromString(date);
-        const name = sheet.getCell(i, 1)?.formattedValue;
-        if(!name) continue;
-        bdays.push([date.getDate(), date.getMonth(), name]);
-    }
-    console.log(bdays);
 
-    setInterval(async () => {
+    cron.schedule("0 7 * * *", async () => {
+        bdays = [];
+        const sheet = doc.sheetsByIndex[0];
+        await sheet.loadCells("A1:B999");
+        for(let i = 0; i < 999; i++) {
+            let date = sheet.getCell(i, 0)?.formattedValue?.replace(/\s+/g, "");
+            if(!date) continue;
+            date = Date.fromString(date);
+            const name = sheet.getCell(i, 1)?.formattedValue;
+            if(!name) continue;
+            bdays.push([date.getDate(), date.getMonth(), name]);
+        }
+        console.log(bdays);
         const now = new Date();
         for(let i of bdays)
             if(now.getDate() == i[0] && now.getMonth() == i[1])
                 bot.sendMessage(parseInt(CHAT), "Сегодня день рождения у " + i[2] + "! Поздравьте его/её!");
-    }, 1000 * 60 * 60 * 24)
+    });
 })();
 
 http.createServer((req, res) => {

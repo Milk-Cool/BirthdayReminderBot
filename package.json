@@ -24,6 +24,7 @@
     "any-date-parser": "^1.5.4",
     "google-auth-library": "^8.9.0",
     "google-spreadsheet": "^4.0.2",
+    "node-cron": "^3.0.2",
     "node-telegram-bot-api": "^0.61.0"
   }
 }

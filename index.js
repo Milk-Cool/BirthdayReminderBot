@@ -22,6 +22,9 @@ let bdays = [];
     const doc = new GoogleSpreadsheet(SPREADSHEET, client);
     await doc.loadInfo();
 
+    // Timezone is GMT, so we have to adjust for MSK
+    // So 7:00 becomes 10:00 and 21:00 on December 31st becomes midnight on January 1st
+
     cron.schedule("0 7 * * *", async () => {
         bdays = [];
         const sheet = doc.sheetsByIndex[0];
@@ -39,6 +42,9 @@ let bdays = [];
         for(let i of bdays)
             if(now.getDate() == i[0] && now.getMonth() == i[1])
                 bot.sendMessage(parseInt(CHAT), "Сегодня день рождения у " + i[2] + "! Поздравьте его/её!");
+    });
+    cron.schedule("0 21 31 12 *", async () => {
+        bot.sendMessage(parseInt(CHAT), "С Новым Годом!");
     });
 })();
 

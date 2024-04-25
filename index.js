@@ -41,7 +41,7 @@ let bdays = [];
         const now = new Date();
         for(let i of bdays)
             if(now.getDate() == i[0] && now.getMonth() == i[1])
-                bot.sendMessage(parseInt(CHAT), "Сегодня день рождения у " + i[2] + "! Поздравьте его/её!");
+                bot.sendMessage(parseInt(CHAT), "Сегодня день рождения отмечает " + i[2] + "! Поздравьте его/её!");
     });
     cron.schedule("0 21 31 12 *", async () => {
         bot.sendMessage(parseInt(CHAT), "С Новым Годом!");

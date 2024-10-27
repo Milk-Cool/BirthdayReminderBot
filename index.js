@@ -5,7 +5,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const http = require("http");
 const cron = require("node-cron");
 
-let { TOKEN, SPREADSHEET, CHAT, EMAIL, KEY } = process.env;
+let { TOKEN, SPREADSHEET, CHAT, EMAIL, KEY, REMIND_1WEEK } = process.env;
 KEY = KEY.replaceAll("\\n", "\n");
 const bot = new TelegramBot(TOKEN, { "polling": true });
 
@@ -39,9 +39,12 @@ let bdays = [];
         }
         console.log(bdays);
         const now = new Date();
+        const nowPlusOneWeek = new Date(Number(now) + 7 * 24 * 3600 * 1000);
         for(let i of bdays)
             if(now.getDate() == i[0] && now.getMonth() == i[1])
                 bot.sendMessage(parseInt(CHAT), "Сегодня день рождения отмечает " + i[2] + "! Поздравьте его/её!");
+            else if(nowPlusOneWeek.getDate() == i[0] && nowPlusOneWeek.getMonth() == i[1])
+                bot.sendMessage(parseInt(CHAT), "Через неделю будет день рождения у " + i[2] + "! Готовтесь :)");
     });
     cron.schedule("0 21 31 12 *", async () => {
         bot.sendMessage(parseInt(CHAT), "С Новым Годом!");

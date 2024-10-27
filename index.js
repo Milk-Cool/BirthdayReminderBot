@@ -43,7 +43,7 @@ let bdays = [];
         for(let i of bdays)
             if(now.getDate() == i[0] && now.getMonth() == i[1])
                 bot.sendMessage(parseInt(CHAT), "Сегодня день рождения отмечает " + i[2] + "! Поздравьте его/её!");
-            else if(nowPlusOneWeek.getDate() == i[0] && nowPlusOneWeek.getMonth() == i[1])
+            else if(REMIND_1WEEK && nowPlusOneWeek.getDate() == i[0] && nowPlusOneWeek.getMonth() == i[1])
                 bot.sendMessage(parseInt(CHAT), "Через неделю будет день рождения у " + i[2] + "! Готовтесь :)");
     });
     cron.schedule("0 21 31 12 *", async () => {

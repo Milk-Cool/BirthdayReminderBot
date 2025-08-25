@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("any-date-parser");
 const { JWT } = require("google-auth-library");
 const { GoogleSpreadsheet } = require("google-spreadsheet");
